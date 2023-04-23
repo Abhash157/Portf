@@ -1,0 +1,29 @@
+@media (min-width:700px) {
+    :root{
+        --res: 1
+    }
+    .welcome-content{
+        position:absolute;
+        bottom: 0;
+        margin-bottom: 20px;
+    }
+    .circles{
+        transform: translateX(-20vw);
+    }
+    .tech-circle img {
+        width: 120px;
+    }
+    .mid-circle-1 img{
+        width: 240px;
+    }
+    .mid-circle-2 img{
+        width: 360px;
+    }
+    .outer-circle img{
+        width: 480px;
+    }
+
+    .continue-btn:hover{
+        
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+         }
+         .pic {
+            position: relative;
+         }
+         .pic img {
+            position: absolute;
+            height: 100vh;
+            clip: rect(0px, 18000px, 1986px, 0px);
+         }
+      </style>
+   </head>
+   <body>
+      <div class="pic">
+         <canvas height="600px" width="1986px"></canvas>
+      </div>
+
+      <script>
+         let canvas = document.querySelector("canvas");
+         let ctx = canvas.getContext("2d");
+         let ref = 423;
+         let frameL = 500;
+         let frameR = 0;
+         let pos = 0;
+         //  setInterval(() => {
+         //     img.style.clip = `rect(0px, ${frameL}px, 1000px, ${frameR}px)`;
+         //     // img.style.transform = 'translateX(' + pos + 'px)'
+         //     img.style.transform = `translateX(${pos}px)`;
+         //     frameL += ref;
+         //     frameR += ref;
+         //     pos -= ref;
+         //     if (frameL > 40000) {
+         //        frameL = 500;
+         //        frameR = 0
+         //     }
+         //  }, 100);
+
+         let img = new Image();
+         img.src = "img/Abhash.png";
+         ctx.drawImage(img, 0, 0, canvas.height, canvas.width);
+      </script>
+   </body>
+</html>
