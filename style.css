@@ -17,7 +17,6 @@ body {
    opacity: 0;
 }
 .pic img {
-   transform: translateY(75px);
    transition-delay: 1s;
 }
 
@@ -49,6 +48,12 @@ body {
    animation: rotate 2s linear infinite;
 }
 
+.temp *{
+   opacity: 0;
+   position: absolute;
+   top:0;
+   left:0;
+}
 /* ----------------------------------------------------------------------------------------- */
 
 /* Style the main content section */

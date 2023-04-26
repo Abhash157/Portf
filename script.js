@@ -97,7 +97,7 @@ function showImg() {
    qs(".pic").style.opacity = 1;
    setTimeout(() => {
       qs(".continue").style.opacity = 1;
-      myImg.style.width = "400px";
+      myImg.style.width = "200px";
    }, imgTimer);
    imgAppeared = true;
 }
@@ -121,9 +121,23 @@ qs(".container").addEventListener("click", () => {
    }
    // IMAGE ANIMATION
    if (imgAppeared) {
-      myImg.src = "img/AbhashAnimation-min.png";
-      myImg.style.width = '7600px'
-
+      let startAnimation = setInterval(animate, 25);
+      let w = 200;
+      function animate() {
+         myImg.src = `img/Abhash/Abhash${frame}.png`;
+         frame++;
+         // let startAnimation= requestAnimationFrame(animate);
+         // if (frame == 63) cancelAnimationFrame(startAnimation);
+         myImg.style.width = w + "px";
+         if (frame == 63) clearInterval(startAnimation);
+         if (frame<45)w += 6;
+      }
+      animate();
+      imgAppeared = false;
+      for (circle of circles) {
+         circle.style.transitionDelay = "0ms";
+      }
+      circles[0].style.width = "2000px";
    }
 });
 
