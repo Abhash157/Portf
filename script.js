@@ -1,31 +1,32 @@
 // MOUSE FUNCTIONS
+// CUSTOM CURSOR
 window.addEventListener("mousemove", function (e) {
-   var customCursor = qs("#custom-cursor");
    customCursor.style.left = e.clientX + "px";
    customCursor.style.top = e.clientY + "px";
 });
+
+// CONTINUE BUTTON HOVER
+window.addEventListener("mousemove", function(e) {
+   continueCursor.style.left = e.clientX + 'px';
+   continueCursor.style.top = e.clientY + 'px';
+});
+
 
 continueBtn.addEventListener("mouseover", () => {
    cBtnHover = true;
    if (res == 1) {
       qs("#hov-ptr").style.display = "block";
-      qs("#custom-cursor img").src = "img/tech-circles/mid-circle-1.png";
+      // qs("#custom-cursor img").src = "img/tech-circles/mid-circle-1.png";
    }
 });
 continueBtn.addEventListener("mouseout", () => {
    cBtnHover = false;
    if (res == 1) {
-      qs("#hov-ptr").style.display = "none";
-      qs("#custom-cursor img").src = "img/tech-circles/tech-circle.png";
+      // qs("#hov-ptr").style.display = "none";
+      // qs("#custom-cursor img").src = "img/tech-circles/tech-circle.png";
    }
 });
 
-// CONTINUE BUTTON HOVER
-// window.addEventListener('mousemove', function(e) {
-//    var continueCursor = qs('#hov-ptr');
-//    continueCursor.style.left = e.clientX + 'px';
-//    continueCursor.style.top = e.clientY + 'px';
-//  });
 
 // EXPAND
 function circleExpand() {
@@ -57,7 +58,6 @@ function circleShrink() {
       circle.style.transitionDelay = "0ms";
       circle.style.width = "100px";
    }
-   myImg.style.width = "0px";
    setTimeout(delayReset, 100);
    welcomeHeading.style.transform = "translateX(-150%)";
    welcomeText.style.transform = "translateX(-150%)";
@@ -82,7 +82,6 @@ function cirContinue() {
    if (res == 0) {
       circleBox.style.transform = "translateX(-50vw)";
    }
-   // myImg.style.opacity = 1;
    continued = false;
    imgTurn = true;
 }
@@ -97,7 +96,6 @@ function showImg() {
    qs(".pic").style.opacity = 1;
    setTimeout(() => {
       qs(".continue").style.opacity = 1;
-      myImg.style.width = "200px";
    }, imgTimer);
    imgAppeared = true;
 }
@@ -113,7 +111,6 @@ qs(".container").addEventListener("click", () => {
          if (cirExpanded) circleNormal();
          else {
             circleExpand();
-            if (imgTurn) showImg();
          }
       } else {
          circleShrink();
@@ -121,23 +118,15 @@ qs(".container").addEventListener("click", () => {
    }
    // IMAGE ANIMATION
    if (imgAppeared) {
-      let startAnimation = setInterval(animate, 25);
-      let w = 200;
-      function animate() {
-         myImg.src = `img/Abhash/Abhash${frame}.png`;
-         frame++;
-         // let startAnimation= requestAnimationFrame(animate);
-         // if (frame == 63) cancelAnimationFrame(startAnimation);
-         myImg.style.width = w + "px";
-         if (frame == 63) clearInterval(startAnimation);
-         if (frame<45)w += 6;
-      }
-      animate();
-      imgAppeared = false;
       for (circle of circles) {
-         circle.style.transitionDelay = "0ms";
+         circle.style.transitionDuration = "2s";
+         circle.style.width = "200vw";
       }
-      circles[0].style.width = "2000px";
+      setTimeout(() => {
+         for (circle of circles) {
+            circle.style.display = "none";
+         }
+      }, 2000);
    }
 });
 

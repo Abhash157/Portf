@@ -7,6 +7,8 @@ function qsall(elem) {
 
 let root = getComputedStyle(document.documentElement);
 let res = parseInt(root.getPropertyValue("--res"));
+var continueCursor = qs("#hov-ptr");
+var customCursor = qs("#custom-cursor");
 const welcomeHeading = qs(".welcome-content h1");
 const welcomeText = qs(".welcome-content p");
 const continueBtn = qs(".continue-btn");
@@ -15,7 +17,7 @@ const circles = qsall(".circles div img");
 let cBtnHover = false;
 let cirExpanded = false;
 let continued = false;
-const myImg = qs(".pic img");
+// const myImg = qs(".pic img");
 let imgTurn = false;
 let imgTimer;
 let imgAppeared = false;
