@@ -1,32 +1,54 @@
 // MOUSE FUNCTIONS
+
 // CUSTOM CURSOR
 window.addEventListener("mousemove", function (e) {
    customCursor.style.left = e.clientX + "px";
    customCursor.style.top = e.clientY + "px";
-});
-
-// CONTINUE BUTTON HOVER
-window.addEventListener("mousemove", function(e) {
    continueCursor.style.left = e.clientX + 'px';
    continueCursor.style.top = e.clientY + 'px';
 });
 
 
+// HOVER POINTER IN
 continueBtn.addEventListener("mouseover", () => {
    cBtnHover = true;
    if (res == 1) {
-      qs("#hov-ptr").style.display = "block";
-      // qs("#custom-cursor img").src = "img/tech-circles/mid-circle-1.png";
+      // qs("#hov-ptr").style.display = "block";
+      qs("#hov-ptr").style.height = "70px";
+      qs("#hov-ptr").style.width = "70px";
    }
 });
+// HOVER POINTER OUT
 continueBtn.addEventListener("mouseout", () => {
    cBtnHover = false;
    if (res == 1) {
       // qs("#hov-ptr").style.display = "none";
-      // qs("#custom-cursor img").src = "img/tech-circles/tech-circle.png";
+      qs("#hov-ptr").style.height = "0px";
+      qs("#hov-ptr").style.width = "0px";
    }
 });
 
+// TOUCHSCREEN
+qs(".container").addEventListener("click", () => {
+   if (res == 0) {
+      if (continued) {
+         // circleBox.style.transform = "translateX(-20%)"
+         cirContinue();
+      }
+      if (!cBtnHover) {
+         if (cirExpanded) circleNormal();
+         else {
+            circleExpand();
+         }  
+      } else {
+         circleShrink();
+      }
+   }
+
+   // SHOW IMAGE
+   if(imgTurn) introScreen()
+
+});
 
 // EXPAND
 function circleExpand() {
@@ -35,7 +57,6 @@ function circleExpand() {
       circles[i - 1].style.width = i * i * 50 + 100 + "px";
    }
    cirExpanded = true;
-   if (res == 1 && imgTurn) showImg();
 }
 
 // NORMAL
@@ -86,49 +107,25 @@ function cirContinue() {
    imgTurn = true;
 }
 
-// SHOW IMAGE
-if (res == 0) {
-   imgTimer = 500;
-} else {
-   imgTimer = 1000;
-}
-function showImg() {
-   qs(".pic").style.opacity = 1;
-   setTimeout(() => {
-      qs(".continue").style.opacity = 1;
-   }, imgTimer);
-   imgAppeared = true;
+function introScreen() {
+   for (i = 0; i < 4; i++) {
+      circles[i].style.transitionDuration = "1000ms";
+      circles[i].style.transitionDelay = "0ms";
+      circles[i].style.width = "150vw";
+      circles[i].style.opacity = "0";
+   }
+   setTimeout(()=>{
+      qs('#welcome').style.display = "none"
+      qs('#intro').style.display = "block"
+   },1000)
 }
 
-// TOUCHSCREEN
-qs(".container").addEventListener("click", () => {
-   if (res == 0) {
-      if (continued) {
-         // circleBox.style.transform = "translateX(-20%)"
-         cirContinue();
-      }
-      if (!cBtnHover) {
-         if (cirExpanded) circleNormal();
-         else {
-            circleExpand();
-         }
-      } else {
-         circleShrink();
-      }
-   }
-   // IMAGE ANIMATION
-   if (imgAppeared) {
-      for (circle of circles) {
-         circle.style.transitionDuration = "2s";
-         circle.style.width = "200vw";
-      }
-      setTimeout(() => {
-         for (circle of circles) {
-            circle.style.display = "none";
-         }
-      }, 2000);
-   }
-});
+
+
+
+
+ 
+
 
 //   // Form submission
 //   const form = document.querySelector('#contact form');

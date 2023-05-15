@@ -37,12 +37,13 @@ body {
 #hov-ptr {
    position: fixed;
    transform: translateX(-50%) translateY(-50%);
-   width: 70px;
-   height: 70px;
+   width: 0px;
+   height: 0px;
+   transition-property: height, width;
+   transition-duration: 500ms;
    z-index: 9999;
    pointer-events: none;
-   transition-delay: 500ms;
-   display: none;
+   /* display: none; */
 }
 #hov-ptr img {
    height: 100%;
