@@ -13,7 +13,6 @@ window.addEventListener("mousemove", function (e) {
 continueBtn.addEventListener("mouseover", () => {
    cBtnHover = true;
    if (res == 1) {
-      // qs("#hov-ptr").style.display = "block";
       qs("#hov-ptr").style.height = "70px";
       qs("#hov-ptr").style.width = "70px";
    }

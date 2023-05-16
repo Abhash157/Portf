@@ -1,23 +1,14 @@
-body {
-   background-color: var(--bg1);
-   /* cursor: none; */
-}
 
-.container {
-   min-height: 100vh;
-   width: 100vw;
-}
-
-#intro {
-   position: absolute;
-   top: 0;
-   right: 0;
-}
 .pic {
    opacity: 0;
 }
 .pic img {
    transition-delay: 1s;
+}
+
+.container {
+   min-height: 100vh;
+   width: 100vw;
 }
 
 #custom-cursor {
@@ -49,3 +40,4 @@ body {
    height: 100%;
    animation: rotate 2s linear infinite;
 }
+
