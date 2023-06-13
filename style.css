@@ -9,10 +9,11 @@
 .container {
    min-height: 100vh;
    width: 100vw;
+   overflow: visible;
 }
 
 #custom-cursor {
-   position: absolute;
+   position: fixed;
    z-index: 9999;
    /* display: none; */
    height: 30px;
@@ -38,7 +39,7 @@
 }
 
 #hov-ptr {
-   position: absolute;
+   position: fixed;
    width: 0px;
    height: 0px;
    transition-property: height, width;
@@ -60,5 +61,28 @@
    background-size: cover;
    background-position: center;
    animation: rotate 4s reverse linear infinite;
+}
+#txt-cursor {
+   position: fixed;
+   width: 0px;
+   height: 0px;
+   transition-property: height, width;
+   transition-duration: 500ms;
+   z-index: 9999;
+   pointer-events: none;
+   /* display: none; */
+   transform: translateX(-50%) translateY(-50%);
+}
+#txt-cursor::before {
+   content: '';
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-image: url('img/Assets/txt-cursor.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
 }
 

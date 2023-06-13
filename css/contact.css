@@ -1,0 +1,186 @@
+.contact {
+   /* background: blue; */
+   height: 100vh;
+   width: 100vw;
+   /* display: none; */
+   display: flex;
+   flex-direction: row;
+}
+/* .contactTitle {
+   color: var(--bg3);
+} */
+
+.devices {
+   height: 100vh;
+   width: 60vw;
+   /* background: red; */
+   /* border-radius: 10%; */
+}
+
+.dvcContainer {
+   height: 500px;
+   width: 500px;
+   /* background: purple; */
+   position: relative;
+}
+.laptop {
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   height: 50%;
+   width: 75%;
+   /* background: brown; */
+   z-index: 2;
+}
+.laptop img {
+   position: absolute;
+}
+.laptop img:nth-of-type(1) {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 92%;
+   width: 92%;
+}
+.laptop img:nth-of-type(2) {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 90%;
+   width: 90%;
+   z-index: 30;
+}
+.laptop img:nth-of-type(3) {
+   height: 5%;
+   width: 100%;
+   bottom: 0;
+   z-index: 32;
+}
+.laptop img:nth-of-type(4) {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 90%;
+   width: 90%;
+   z-index: 30;
+   object-fit: cover;
+   border-radius: 10px;
+}
+.phone {
+   position: absolute;
+   left: 0;
+   top: 43%;
+   transform: translateY(-50%);
+   height: 60%;
+   width: 30%;
+   margin-left: 5%;
+   /* background: blue; */
+   z-index: 40;
+}
+.phone img {
+   position: absolute;
+}
+.phone img:nth-of-type(1) {
+   height: 100%;
+   width: 100%;
+}
+.phone img:nth-of-type(2) {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 90%;
+   width: 82%;
+   z-index: 42;
+   filter: blur(20px);
+   opacity: 0.7;
+}
+.phone img:nth-of-type(3) {
+   height: 4%;
+   width: 35%;
+   top: 3%;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 45;
+   filter: brightness(70%);
+}
+.phone img:nth-of-type(4) {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 96%;
+   width: 92%;
+   z-index: 42;
+   object-fit: cover;
+}
+
+.form {
+   height: 100vh;
+   width: 40vw;
+   position: relative;
+}
+.form #contactForm {
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   overflow: visible;
+}
+.form #contactForm::before {
+   content: "Contact Me";
+   position: absolute;
+   top: 0;
+   left: 50%;
+   width: 100%;
+   /* background: brown; */
+   transform: translate(-50%, -200%);
+   color: var(--bg2);
+   font-family: "Acquire", sans-serif;
+   font-size: 2em;
+   letter-spacing: 10px;
+   text-align: center;
+}
+
+.contentContainer {
+   display: flex;
+   flex-shrink: 0;
+   font-family: "Acquire", sans-serif;
+   color: white;
+   margin: 10px 0;
+   position: relative;
+   overflow: visible;
+}
+.contentContainer label {
+   width: 20%;
+   text-align: right;
+   padding-right: 10px;
+}
+
+.contentContainer #email,
+.contentContainer #message {
+   width: 80%;
+   border: 1px solid var(--bg2);
+   background: transparent;
+   resize: none;
+   color: #48acf8;
+   /* font-size: 1.2em; */
+   font-family: 'Nova Flat', cursive;
+   overflow: scroll;
+   scroll-behavior: smooth;
+}
+.contentContainer #message::-webkit-scrollbar {
+   display: none;
+}
+
+#contactBtn {
+   position: absolute;
+   bottom: 0;
+   right: 10px;
+   transform: translateY(50%);
+   border: none;
+   border-radius: 30px;
+   background: var(--bg2);
+   padding: 2px 15px;
+   overflow: visible;
+   font-family: "Groupe", sans-serif;
+   font-size: 1.1em;
+}

@@ -1,0 +1,152 @@
+
+.skills{
+   height: 100vh;
+   width: 100vw;
+}
+
+.abhashBox {
+   height: 100vh;
+   width: auto;
+   /* display: none; */
+}
+.triTech {
+   height: 70%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -54%);
+   opacity: 0.4;
+   --blur: 7;
+}
+.triTech img {
+   height: 100%;
+}
+.inchCircle {
+   height: 59%;
+   opacity: 0.5;
+   --blur: 3;
+   overflow: visible;
+}
+.inchCircle img {
+   height: 100%;
+   animation: arcOscillate 1s linear alternate infinite;
+   transform-origin: center;
+}
+.tech-circle3 {
+   height: 40%;
+   --blur: 10;
+   transform-origin: 47%;
+}
+.tech-circle3 img {
+   height: 100%;
+}
+.abhash {
+   /* display: none; */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   height: 50vh;
+   width: 50vh;
+   transform: translate(-50%, -40%);
+   z-index: 1;
+}
+.abhashbox {
+   height: 100%;
+   border-radius: 50%;
+   position: relative;
+   /* background: red; */
+}
+.abhash canvas {
+   display: block;
+   width: 80%;
+   height: 80%;
+   object-fit: cover; /* Ensure the image fills the container */
+   mask-image: radial-gradient(circle, transparent 65%, white 80%);
+   -webkit-mask-image: radial-gradient(circle, white 65%, transparent 80%);
+   z-index: 1;
+}
+
+@keyframes arcOscillate {
+   from {
+      transform: rotate(15deg);
+   }
+   to {
+      transform: rotate(-15deg);
+   }
+}
+
+
+.skillsBox{
+   height: 100vh;
+   width: 230vw;
+   display: flex;
+   /* display: none; */
+   justify-content: space-between;
+   flex-shrink: 0;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   z-index: 3;
+   /* background: green; */
+   /* transform: translateX(-50%); */
+}
+.skillsList{
+   /* border: 1px red solid; */
+   height: 100%;
+   width: 90vw;
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   margin:0 5vw;
+   overflow: visible;
+}
+.space{
+   /* background: blue; */
+   width: 30vw;
+}
+.skillsContainer{
+   position: absolute;
+   width: 25vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   top: 50%;
+   transform: translateY(calc(-50% - 1.5vh));
+   overflow: visible;
+}
+.skillsContainer:first-of-type{
+   top: 50%;
+   left: 0%;
+}
+.skillsContainer:last-of-type{
+   top: 50%;
+   right: 0%;
+}
+.skill{
+   height: auto;
+   color: white;
+   position: relative;
+   overflow: visible;
+   margin: 2.8vh 0;
+   font-family: 'Acquire', sans-serif;
+}
+.skill::before{
+   content:'';
+   position: absolute;
+   bottom: -20%;
+   left: 0;
+   height: 10%;
+   width: var(--level);
+   background: var(--bg2);
+   filter: blur(2px);
+}
+.skill::after{
+   content:'';
+   position: absolute;
+   bottom: -20%;
+   left: 0;
+   height: 10%;
+   width: var(--level);
+   background: var(--bg2);
+}
+

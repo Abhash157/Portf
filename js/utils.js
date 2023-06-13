@@ -11,6 +11,7 @@ let res = parseInt(root.getPropertyValue("--res"));
 // WELCOME
 var continueCursor = qs("#hov-ptr");
 var customCursor = qs("#custom-cursor");
+var txtCursor = qs("#txt-cursor");
 const welcomeHeading = qs(".welcome-content h1");
 const welcomeText = qs(".welcome-content p");
 const continueBtn = qs(".continue-btn");
@@ -31,6 +32,8 @@ window.addEventListener("mousemove", function (e) {
      customCursor.style.top = e.clientY + "px";
      continueCursor.style.left = e.clientX + "px";
      continueCursor.style.top = e.clientY + "px";
+     txtCursor.style.left = e.clientX + "px";
+     txtCursor.style.top = e.clientY + "px";
  });
 
 
@@ -47,6 +50,8 @@ let sLine = qsall(".signalLine");
 // let fakeinfo = ['Gathering information', 'Collecting resources', 'Analyzing Environment','Setting Up Connection', 'Retrieving Data', 'Connecting Networks', 'Extracing System Data', 'Scanning vulnerabilities', 'Encrypting Connection', 'Securing Encryption', 'Advanced Data Mining', 'Deploying Spiders', 'Quantum computing', 'Data pattern recognition', 'Bypassing Firewall', 'Access Granted', 'Channel Open', 'Data Pipeline Active', 'Network Engaged', 'Connection Confirmed', 'Interface Online', 'Connection Successful']
 
 
+//BLUR ELEMENTS
+
 for (let i = 0; i < elements.length; i++) {
    let blurelem = elements[i];
    let computedStyle = window.getComputedStyle(blurelem);
@@ -54,11 +59,8 @@ for (let i = 0; i < elements.length; i++) {
    let cloneElement = blurelem.cloneNode(true);
    blurelem.parentNode.appendChild(cloneElement);
    cloneElement.style.filter = `blur(${blur}px)`;
-   cloneElement.style.opacity = 0
 }
 
-
-//BLUR ELEMENTS
 let txtelements = document.querySelectorAll(".txtblurred");
 
 for (let i = 0; i < txtelements.length; i++) {
@@ -101,5 +103,21 @@ for (let i = 0; i < delelements.length; i++) {
    cloneElement2.style.animationDelay= '0ms';
    cloneElement2.style.opacity= '0.2'
 }
+
+
+// SKILLS
+const skillsBox = qs('.skillsBox')
+let skillsContainer = qsall('.skillsContainer')
+let prevPos = 0
+let showBox = qsall('.showBox')
+let showBg = qsall('.showBg')
+let showImg = qsall('svg defs image')
+
+
+// CONTACT
+
+let submit = qs('#contactBtn')
+let msgArea = qs('#message')
+let emailArea = qs('#email')
 
 
