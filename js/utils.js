@@ -17,6 +17,7 @@ const welcomeText = qs(".welcome-content p");
 const continueBtn = qs(".continue-btn");
 const circleBox = qs(".circles");
 const circles = qsall(".circles div img");
+const clickPrompt = qs(".clickPrompt");
 let cBtnHover = false;
 let cirExpanded = false;
 let continued = false;
@@ -112,6 +113,8 @@ let prevPos = 0
 let showBox = qsall('.showBox')
 let showBg = qsall('.showBg')
 let showImg = qsall('svg defs image')
+let helpingArrow = qs('.helpingArrow')
+let showGuide = true
 
 
 // CONTACT

@@ -8,8 +8,7 @@
 }
 @font-face {
    font-family: "Glitch";
-   src: url("../fonts/GlitchInside.ttf") format("truetype"),
-      url("../fonts/GlitchInside.otf") format("opentype"),
+   src: url("../fonts/GlitchInside.otf") format("opentype"),
       url("../fonts/GlitchInside.woff") format("woff");
 }
 @font-face {

@@ -112,7 +112,7 @@ function introOut() {
    qs(".identity").style.left = "-100%";
    qs(".map").style.left = "-100%";
    qs(".name").style.transform = "translateX(-100vw)";
-   window.location.href= 'https://abhash157.github.io/Portf/skills.html'
+   window.location.href = 'https://abhash157.github.io/Portf/skills.html'
 
    setTimeout(() => {
       qs("#intro").style.display = "none";

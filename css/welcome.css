@@ -130,3 +130,20 @@
     --del: 800ms;
     --del2: 4s;
  }
+
+ .clickPrompt{
+   display: none;
+   opacity: 0;
+   position: absolute;
+   left: 50%;
+   bottom: 20%;
+   transform: translateX(-50%);
+   
+}
+ .clickPrompt p{
+font-size: 2em;
+font-family: 'Acquire';
+color: transparent;
+-webkit-text-stroke: 1px blue;
+
+ }
