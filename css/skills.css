@@ -150,3 +150,32 @@
    background: var(--bg2);
 }
 
+.helpingArrow{
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%);
+   bottom: 0;
+   height: 100px;
+   width: 151px;
+   display: none;
+}
+.rightArrow{
+   height: 8px;
+   width: 80px;
+   background: var(--bg2);
+   position: absolute;
+   left: 0;
+   bottom: 50%;
+   transform: rotate(20deg);
+   filter: blur(1px);
+}
+.leftArrow{
+   height: 8px;
+   width: 80px;
+   background: var(--bg2);
+   position: absolute;
+   right: 0;
+   bottom: 50%;
+   transform: rotate(-20deg);
+   filter: blur(1px);
+}

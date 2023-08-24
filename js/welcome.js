@@ -96,6 +96,10 @@ function cirContinue() {
       circleBox.style.transform = "translateX(-50vw)";
    }
    continued = false;
+   clickPrompt.style.display= 'block'
+   setTimeout(()=>{
+      clickPrompt.style.animation= 'twinkle 1s alternate ease-in-out infinite'
+   },5000)
    imgTurn = true;
 }
 
