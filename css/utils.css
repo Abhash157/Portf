@@ -1,223 +1,224 @@
 /* link font */
-@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@200&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sarpanch:wght@400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sarpanch&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
 @font-face {
-   font-family: "Acquire";
-   src: url("../fonts/Aquire.ttf") format("truetype"),
-      url("../fonts/Aquire.otf") format("opentype"),
-      url("../fonts/Aquire.woff") format("woff");
+  font-family: "Acquire";
+  src: url("../fonts/Aquire.ttf") format("truetype"),
+    url("../fonts/Aquire.otf") format("opentype"),
+    url("../fonts/Aquire.woff") format("woff");
 }
 @font-face {
-   font-family: "Glitch";
-   src: url("../fonts/GlitchInside.otf") format("opentype"),
-      url("../fonts/GlitchInside.woff") format("woff");
+  font-family: "Glitch";
+  src: url("../fonts/GlitchInside.otf") format("opentype"),
+    url("../fonts/GlitchInside.woff") format("woff");
 }
 @font-face {
-   font-family: "Groupe";
-   src: url("../fonts/GroupeMedium-8MXgn.ttf") format("truetype"),
-      url("../fonts/GroupeMedium-8MXgn.otf") format("opentype"),
-      url("../fonts/GroupeMedium-8MXgn.woff") format("woff");
+  font-family: "Groupe";
+  src: url("../fonts/GroupeMedium-8MXgn.ttf") format("truetype"),
+    url("../fonts/GroupeMedium-8MXgn.otf") format("opentype"),
+    url("../fonts/GroupeMedium-8MXgn.woff") format("woff");
 }
-@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@200&family=Poppins&display=swap');
 
 :root {
-   --res: 0;
-   --bg1: #080809;
-   --bg2: #1694f2;
-   --bg3: #025ced;
+  --res: 0;
+  --bg1: #080809;
+  --bg2: #1694f2;
+  --bg3: #025ced;
 }
-html{
-   scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-
 
 /* HIDE SCROLLBAR */
 ::-webkit-scrollbar {
-   width: 0.3em;
+  width: 0.3em;
 }
 
 ::-webkit-scrollbar-track {
-   background-color: transparent;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-   background-color: var(--bg3);
-   border-radius: 50%;
+  background-color: var(--bg3);
+  border-radius: 50%;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-   background-color: var(--bg2);
+  background-color: var(--bg2);
 }
 html {
-   scrollbar-width: none;
+  scrollbar-width: none;
 }
-
 
 * {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
-   overflow-x: hidden;
-   user-select: none;
-   cursor: none;
-   /* pointer-events: none; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  user-select: none;
+  cursor: none;
+  /* pointer-events: none; */
 }
 .container {
-   overflow: hidden;
+  overflow: hidden;
 }
 .container * {
-   overflow: hidden;
+  overflow: hidden;
 }
 * img {
-   pointer-events: none;
-   user-select: none;
+  pointer-events: none;
+  user-select: none;
 }
 
 body {
-   min-height: 100vh;
-   background-color: black;
-   /* font-family: "Kanit", sans-serif; */
-   /* overflow: visible; */
-   /* overflow-y: scroll !important; */
-   overflow: hidden;
+  min-height: 100vh;
+  background-color: black;
+  /* font-family: "Kanit", sans-serif; */
+  /* overflow: visible; */
+  /* overflow-y: scroll !important; */
+  overflow: hidden;
 }
 
 @keyframes rotate {
-   from {
-      transform: rotate(0deg);
-   }
-   to {
-      transform: rotate(360deg);
-   }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 @keyframes oscillate {
-   0% {
-      transform: scale(110%) rotate(-5deg);
-   }
-   10% {
-      transform: scale(110%) rotate(-5deg);
-   }
-   30% {
-      transform: rotate(-5deg);
-   }
-   40% {
-      transform: rotate(-5deg);
-   }
-   60% {
-      transform: rotate(5deg);
-   }
-   70% {
-      transform: rotate(5deg);
-   }
-   90% {
-      transform: scale(110%) rotate(5deg);
-   }
-   100% {
-      transform: scale(110%) rotate(5deg);
-   }
+  0% {
+    transform: scale(110%) rotate(-5deg);
+  }
+  10% {
+    transform: scale(110%) rotate(-5deg);
+  }
+  30% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  70% {
+    transform: rotate(5deg);
+  }
+  90% {
+    transform: scale(110%) rotate(5deg);
+  }
+  100% {
+    transform: scale(110%) rotate(5deg);
+  }
 }
 @keyframes posrotate {
-   from {
-      transform: translate(-50%, -50%) rotate(0deg);
-   }
-   to {
-      transform: translate(-50%, -50%) rotate(360deg);
-   }
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 @keyframes fluctuate {
-   from {
-      height: 0%;
-   }
-   to {
-      height: 100%;
-   }
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
 }
 @keyframes mapscrape {
-   0% {
-      transform: scale(100%) translateX(-50%) translateY(-50%);
-   }
-   2% {
-      transform: scale(100%) translateX(-50%) translateY(-50%);
-   }
-   10% {
-      transform: scale(1000%) translateX(-28%) translateY(-5%);
-   }
-   12% {
-      transform: scale(1000%) translateX(-28%) translateY(-5%);
-   }
-   20% {
-      transform: scale(800%) translateX(10%) translateY(30%);
-   }
-   22% {
-      transform: scale(800%) translateX(10%) translateY(30%);
-   }
-   30% {
-      transform: scale(900%) translateX(20%) translateY(20%);
-   }
-   32% {
-      transform: scale(900%) translateX(20%) translateY(20%);
-   }
-   40% {
-      transform: scale(500%) translateX(-50%) translateY(20%);
-   }
-   42% {
-      transform: scale(500%) translateX(-50%) translateY(20%);
-   }
-   50% {
-      transform: scale(900%) translateX(-32%) translateY(35%);
-   }
-   52% {
-      transform: scale(900%) translateX(-32%) translateY(35%);
-   }
-   60% {
-      transform: scale(1000%) translateX(-42%) translateY(-35%);
-   }
-   62% {
-      transform: scale(1000%) translateX(-42%) translateY(-35%);
-   }
-   70% {
-      transform: scale(900%) translateX(-42%) translateY(-3%);
-   }
-   72% {
-      transform: scale(900%) translateX(-42%) translateY(-3%);
-      opacity: 70%;
-   }
-   80% {
-      transform: scale(1500%) translateX(20%) translateY(-20%);
-      opacity: 100%;
-   }
-   82% {
-      transform: scale(1500%) translateX(20%) translateY(-20%);
-      opacity: 100%;
-   }
-   90% {
-      transform: scale(1000%) translateX(-8%) translateY(-30%);
-      opacity: 70%;
-   }
-   92% {
-      transform: scale(1000%) translateX(-8%) translateY(-30%);
-   }
-   100% {
-      transform: scale(4000%) translateX(-22.1%) translateY(-4.3%);
-   }
+  0% {
+    transform: scale(100%) translateX(-50%) translateY(-50%);
+  }
+  2% {
+    transform: scale(100%) translateX(-50%) translateY(-50%);
+  }
+  10% {
+    transform: scale(1000%) translateX(-28%) translateY(-5%);
+  }
+  12% {
+    transform: scale(1000%) translateX(-28%) translateY(-5%);
+  }
+  20% {
+    transform: scale(800%) translateX(10%) translateY(30%);
+  }
+  22% {
+    transform: scale(800%) translateX(10%) translateY(30%);
+  }
+  30% {
+    transform: scale(900%) translateX(20%) translateY(20%);
+  }
+  32% {
+    transform: scale(900%) translateX(20%) translateY(20%);
+  }
+  40% {
+    transform: scale(500%) translateX(-50%) translateY(20%);
+  }
+  42% {
+    transform: scale(500%) translateX(-50%) translateY(20%);
+  }
+  50% {
+    transform: scale(900%) translateX(-32%) translateY(35%);
+  }
+  52% {
+    transform: scale(900%) translateX(-32%) translateY(35%);
+  }
+  60% {
+    transform: scale(1000%) translateX(-42%) translateY(-35%);
+  }
+  62% {
+    transform: scale(1000%) translateX(-42%) translateY(-35%);
+  }
+  70% {
+    transform: scale(900%) translateX(-42%) translateY(-3%);
+  }
+  72% {
+    transform: scale(900%) translateX(-42%) translateY(-3%);
+    opacity: 70%;
+  }
+  80% {
+    transform: scale(1500%) translateX(20%) translateY(-20%);
+    opacity: 100%;
+  }
+  82% {
+    transform: scale(1500%) translateX(20%) translateY(-20%);
+    opacity: 100%;
+  }
+  90% {
+    transform: scale(1000%) translateX(-8%) translateY(-30%);
+    opacity: 70%;
+  }
+  92% {
+    transform: scale(1000%) translateX(-8%) translateY(-30%);
+  }
+  100% {
+    transform: scale(4000%) translateX(-22.1%) translateY(-4.3%);
+  }
 }
 @keyframes twinkle {
-   from {
-      opacity: 0;
-   }
-   to {
-      opacity: 1;
-   }
+  from {
+    opacity: 0.02;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .centered {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .poscentered {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -46,7 +46,7 @@ qs(".container").addEventListener("click", () => {
 function circleExpand() {
    // const el = event.target
    for (i = 1; i <= 4; i++) {
-      circles[i - 1].style.width = i * i * 50 + 100 + "px";
+      circles[i - 1].style.width = i * i * 50 + 100 + "px"; //100 + (0,1,4,9)th of original size
    }
    cirExpanded = true;
 }
@@ -106,8 +106,8 @@ function cirContinue() {
 function introScreen() {
    for (i = 0; i < 4; i++) {
       circles[i].style.transitionDuration = "1000ms";
-      circles[i].style.transitionDelay = "0ms";
-      circles[i].style.width = "150vw";
+      circles[i].style.transitionDelay = "var(--del3)";
+      circles[i].style.width = "180vw";
       circles[i].style.opacity = "0";
    }
    imgTurn = false

@@ -1,149 +1,153 @@
-
- 
- #welcome {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    position: relative;
-    /* cursor: default; */
- }
- 
- .welcome-content {
-    z-index: 10;
-    font-size: 1.3em;
-    padding: 20px;
- }
- .welcome-content * {
-    transition-duration: 800ms;
-    transition-timing-function: ease-in-out;
- }
- .welcome-content p {
-    transition-delay: 300ms;
- }
- 
- #welcome h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    border-bottom: 1px solid var(--bg3);
- }
- 
- .continue {
-    margin-top: 10px;
-    width: 200px;
-    position: relative;
- }
- 
- .continue-btn {
-    height: 45px;
-    width: 140px;
-    border: none;
-    padding: 5px 10px;
-    font-size: 1.1em;
-    display: inline;
-    background: linear-gradient(
-       45deg,
-       transparent 5%,
-       var(--bg2) 5%,
-       var(--bg2) 95%,
-       transparent 95%
-    );
-    position: relative;
-    transition: 100ms ease-in-out;
-    z-index: 2;
- }
-
- .continue-btn:hover {
-    background: linear-gradient(
-       45deg,
-       transparent 5%,
-       var(--bg2) 5%,
-       var(--bg3) 95%,
-       transparent 95%
-    );
-    color: var(--bg1);
-    text-shadow: 0 0 10px white;
-    cursor: none ;
- }
- 
- .welcome-img {
-    position: absolute;
-    width: 200vw;
- }
- 
- .circles {
-    position: relative;
-    height: 100vh;
-    transition: 1s ease-in-out;
- }
- 
- .circles div {
-    position: absolute;
-    height: 100%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    pointer-events: none;
- }
- 
- .outer-circle {
-    height: 100vh;
-    width: 1000vh;
- }
- 
- .circles div img {
-    transition: 500ms;
-    transition-delay: var(--del);
-    transition-timing-function: ease-out;
-    animation-duration: var(--del2);
-    animation-fill-mode: forwards;
- }
- .tech-circle img {
-    width: 100px;
-    animation: rotate 5s linear infinite forwards;
-    animation-duration: var(--del2);
-    --del: 0ms;
-    --del2: 5s;
- }
- .mid-circle-1 img {
-    width: 200px;
-    animation: rotate 2s linear infinite reverse;
-    animation-duration: var(--del2);
-    --del: 200ms;
-    --del2: 2s;
- }
- .mid-circle-2 img {
-    width: 300px;
-    animation: rotate var(--del2) linear infinite forwards;
-    --del: 600ms;
-    --del2: 3s;
- }
- .outer-circle img {
-    width: 400px;
-    animation: rotate var(--del2) linear infinite reverse;
-    --del: 800ms;
-    --del2: 4s;
- }
-
- .clickPrompt{
-   display: none;
-   opacity: 0;
-   position: absolute;
-   left: 50%;
-   bottom: 20%;
-   transform: translateX(-50%);
-   
+#welcome {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  /* cursor: default; */
 }
- .clickPrompt p{
-font-size: 2em;
-font-family: 'Acquire';
-color: transparent;
--webkit-text-stroke: 1px blue;
 
- }
+.welcome-content {
+  z-index: 10;
+  font-size: 1.3em;
+  padding: 20px;
+}
+.welcome-content * {
+  /* transition-duration: 800ms; */
+  transition-duration: 0ms;
+  transition-timing-function: ease-in-out;
+}
+.welcome-content p {
+  font-family: "Bungee Hairline", sans-serif;
+  transition-delay: 300ms;
+}
+
+#welcome h1 {
+  /* font-size: 2.5em; */
+  /* border-bottom: 1px solid var(--bg3); */
+  font-family: "Sarpanch", sans-serif;
+  /* font-weight: bold; */
+  /* font-style: normal; */
+}
+
+.continue {
+  margin-top: 10px;
+  width: 200px;
+  position: relative;
+}
+
+.continue-btn {
+  height: 45px;
+  width: 140px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.1em;
+  display: inline;
+  background: linear-gradient(
+    45deg,
+    transparent 5%,
+    var(--bg2) 5%,
+    var(--bg2) 95%,
+    transparent 95%
+  );
+  position: relative;
+  transition: 100ms ease-in-out;
+  z-index: 2;
+  font-family: "Sarpanch", sans-serif;
+}
+
+.continue-btn:hover {
+  background: linear-gradient(
+    45deg,
+    transparent 5%,
+    var(--bg2) 5%,
+    var(--bg3) 95%,
+    transparent 95%
+  );
+  color: var(--bg1);
+  text-shadow: 0 0 10px white;
+  cursor: none;
+}
+
+.welcome-img {
+  position: absolute;
+  width: 200vw;
+}
+
+.circles {
+  position: relative;
+  height: 100vh;
+  transition: 1s ease-in-out;
+}
+
+.circles div {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.outer-circle {
+  height: 100vh;
+  width: 1000vh;
+}
+
+.circles div img {
+  transition: 500ms;
+  transition-delay: var(--del);
+  transition-timing-function: ease-out;
+  animation-duration: var(--del2);
+  animation-fill-mode: forwards;
+}
+.tech-circle img {
+  width: 100px;
+  animation: rotate 5s linear infinite forwards;
+  animation-duration: var(--del2);
+  --del: 0ms;
+  --del2: 5s;
+  --del3: 300ms;
+}
+.mid-circle-1 img {
+  width: 200px;
+  animation: rotate 2s linear infinite reverse;
+  animation-duration: var(--del2);
+  --del: 200ms;
+  --del2: 2s;
+  --del3: 200ms;
+}
+.mid-circle-2 img {
+  width: 300px;
+  animation: rotate var(--del2) linear infinite forwards;
+  --del: 600ms;
+  --del2: 3s;
+  --del3: 100ms;
+}
+.outer-circle img {
+  width: 400px;
+  animation: rotate var(--del2) linear infinite reverse;
+  --del: 800ms;
+  --del2: 4s;
+  --del3: 0ms;
+}
+
+.clickPrompt {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+}
+.clickPrompt p {
+  font-size: 2em;
+  font-family: "Acquire";
+  color: #ccc;
+}
