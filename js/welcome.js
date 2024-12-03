@@ -32,9 +32,8 @@ qs(".container").addEventListener("click", () => {
          else {
             circleExpand();
          }  
-      } else {
+      } else 
          circleShrink();
-      }
    }
 
    // SHOW IMAGE
@@ -71,14 +70,15 @@ function circleShrink() {
       circle.style.transitionDelay = "0ms";
       circle.style.width = "100px";
    }
-   setTimeout(delayReset, 100);
-   welcomeHeading.style.transform = "translateX(-150%)";
-   welcomeText.style.transform = "translateX(-150%)";
+   setTimeout(delayReset, 100); // Change transition delay of circles to --del
+   welcomeHeading.style.transform = "translateX(-100vw)";
+   welcomeText.style.transform = "translateX(-100vw)";
    continueBtn.innerHTML = "";
    continueBtn.style.background =
       "linear-gradient(45deg, transparent 5%, #1694f290 5%, #1694F250 30%, #025CED50 70%, #025ced90 95%, transparent 95%)";
    cirExpanded = true;
    continued = true;
+   
    continueBtn.addEventListener("mouseout", circleExpand);
 }
 
@@ -96,6 +96,7 @@ function cirContinue() {
       circleBox.style.transform = "translateX(-50vw)";
    }
    continued = false;
+   // Show Click Prompt after 1 second
    clickPrompt.style.display= 'block'
    setTimeout(()=>{
       clickPrompt.style.animation= 'twinkle 1s alternate ease-in-out infinite'

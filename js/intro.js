@@ -1,3 +1,5 @@
+qs('#welcome').style.display = "none"
+setTimeout(showIntroHUD, 100)
 function showIntroHUD() {
    qs("#intro").style.display = "block";
    setTimeout(() => {
@@ -5,8 +7,15 @@ function showIntroHUD() {
       techCircle2.style.opacity = 0.2;
       qs(".hero").style.height = "50vh";
       qs(".hero").style.width = "50vh";
+      // qs(".info").style.transform = "translateX(0%) translateY(-50%)";
+      qs(".infoBox").style.transform = "translateY(-50%)"
       qs(".info").style.transform = "translateX(0%)";
+      qs(".info").style.height = "100%";
+      qs(".info").style.width = "35%";
+      // qsall(".info")[1].style.transform = "translateX(0%) translateY(-50%)";
       qsall(".info")[1].style.transform = "translateX(0%)";
+      qsall(".info")[1].style.height = "100%";
+      qsall(".info")[1].style.width = "35%";
       qs(".mapframe").style.right = 0;
       qs(".identity").style.right = "3.3%";
       qs(".map").style.animation = "mapscrape 10s ease-in-out";
@@ -98,6 +107,10 @@ function showIntro() {
 
    requestAnimationFrame(animate);
    animate();
+}
+
+function heroPop() {
+
 }
 
 function introOut() {

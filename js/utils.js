@@ -20,6 +20,7 @@ const circles = qsall(".circles div img");
 const clickPrompt = qs(".clickPrompt");
 let cBtnHover = false;
 let cirExpanded = false;
+let cirshrinked = true
 let continued = false;
 // const myImg = qs(".pic img");
 let imgTurn = false;

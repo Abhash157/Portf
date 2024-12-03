@@ -21,6 +21,7 @@
 }
 .welcome-content p {
   font-family: "Bungee Hairline", sans-serif;
+  transition-duration: 1000ms;
   transition-delay: 300ms;
 }
 
@@ -28,6 +29,7 @@
   /* font-size: 2.5em; */
   /* border-bottom: 1px solid var(--bg3); */
   font-family: "Sarpanch", sans-serif;
+  transition-duration: 1000ms;
   /* font-weight: bold; */
   /* font-style: normal; */
 }
@@ -36,6 +38,7 @@
   margin-top: 10px;
   width: 200px;
   position: relative;
+  transition: 1000ms ease-in-out;
 }
 
 .continue-btn {
@@ -53,7 +56,7 @@
     transparent 95%
   );
   position: relative;
-  transition: 100ms ease-in-out;
+  transition: 1000ms ease-in-out;
   z-index: 2;
   font-family: "Sarpanch", sans-serif;
 }
